@@ -1,6 +1,6 @@
 <div class="container ">
     <button class="btn btn-primary mt-md-4" type="button"   (click)="showText()">{{show?"show":"hide"}}</button>
-    <div *ngIf="show">Hello!</div>
+    <div *ngIf="show">Hello all!</div>
     <div *ngFor="let item of items; let i= index" [ngClass]="{'colorItem':i>2}">count: {{item}} </div>
 </div>
 
