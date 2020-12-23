@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-angular-project';
+  show=true;
+  count=0;
+  items=[];
+  showText(){
+   this.show=!this.show;
+  this.items.push(new Date());
+
+  }
 }
