@@ -1,6 +1,19 @@
 <div class="container ">
-    <button class="btn btn-primary mt-md-4" type="button"   (click)="showText()">{{show?"show":"hide"}}</button>
-    <div *ngIf="show">Hello all!</div>
-    <div *ngFor="let item of items; let i= index" [ngClass]="{'colorItem':i>2}">count: {{item}} </div>
-</div>
+    <div class="row  ">
+        <div class="col ">
+            <app-game-control (emitRestart)="onRestart()" (emitCount)="onEmitCount($event)"></app-game-control>
+        </div>
+        
+    </div>
+    <div class="row">
+        <div class="col-md">
 
+            <app-odd [oddlist]="oddnums"></app-odd>
+        </div>
+        <div class="col-md">
+            <app-even [evenlist]="evennums"></app-even>
+        </div>
+    </div>
+
+
+</div>

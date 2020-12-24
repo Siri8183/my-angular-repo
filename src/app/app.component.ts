@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'; 
+
 
 @Component({
   selector: 'app-root',
@@ -7,12 +8,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-angular-project';
-  show=true;
-  count=0;
-  items=[];
-  showText(){
-   this.show=!this.show;
-  this.items.push(new Date());
+   oddnums:number[]=[];
+   evennums:number[]=[];
+ constructor(){
+   } 
+   onEmitCount(e:number){
+    if(e%2==0)
+    this.evennums.push(e);
+    else
+    this.oddnums.push(e);
+   }
 
-  }
+   onRestart(){
+     this.oddnums=[];
+     this.evennums=[];
+   }
+   
+  
 }
